@@ -1,0 +1,84 @@
+{
+  "paper_title": "Validating API Design Requirements for Interoperability: A Static Analysis Approach Using OpenAPI",
+  "paper_url": "https://arxiv.org/pdf/2511.17836v1",
+  "societal_problem": "Ensuring high-quality, interoperable, and maintainable APIs is critical for modern enterprises, but the current manual and ad hoc processes for validating API design quality are inefficient, error-prone, and do not scale well. This impacts system evolution, service interoperability, and governance across organizational boundaries.",
+  "solution_architecture": "The solution is a production-ready API quality validation platform that uses a configurable rule engine to validate OpenAPI specifications against a set of design rules. The platform will support integration with CI/CD pipelines, provide a web-based dashboard for managing rules and reports, and offer IDE plugins for real-time feedback. The tech stack includes Python (for the rule engine), FastAPI (backend API), React.js (frontend), PostgreSQL (database), Docker (containerization), Kubernetes (orchestrating deployments), and GitHub Actions (CI/CD).",
+  "status": "in_progress",
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Set up the project repository with basic folder structures, initialize Git, and configure Docker for containerization.",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "description": "Implement a configurable rule engine in Python to validate OpenAPI specifications against predefined rules.",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "description": "Design and implement a RESTful API using FastAPI to expose endpoints for uploading OpenAPI files, running validations, and retrieving reports.",
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "description": "Develop a PostgreSQL database schema to store rule configurations, validation results, and user data.",
+      "status": "pending"
+    },
+    {
+      "id": 5,
+      "description": "Create a React.js frontend for managing API design rules, viewing validation reports, and configuring rule settings.",
+      "status": "pending"
+    },
+    {
+      "id": 6,
+      "description": "Integrate the rule engine with the backend API to process OpenAPI files and return validation results.",
+      "status": "pending"
+    },
+    {
+      "id": 7,
+      "description": "Develop a feature in the frontend to allow users to enable, disable, or customize API design rules.",
+      "status": "pending"
+    },
+    {
+      "id": 8,
+      "description": "Build a reporting module in the frontend to display actionable feedback and traceable validation results.",
+      "status": "pending"
+    },
+    {
+      "id": 9,
+      "description": "Integrate the tool with CI/CD pipelines using GitHub Actions to enable automated validation of OpenAPI files during development.",
+      "status": "pending"
+    },
+    {
+      "id": 10,
+      "description": "Develop an IDE plugin (e.g., for VS Code) to provide real-time API validation feedback during development.",
+      "status": "pending"
+    },
+    {
+      "id": 11,
+      "description": "Write unit tests for the rule engine to ensure accuracy and reliability of validation logic.",
+      "status": "pending"
+    },
+    {
+      "id": 12,
+      "description": "Implement authentication and authorization for the backend API to secure access to rule configurations and validation reports.",
+      "status": "pending"
+    },
+    {
+      "id": 13,
+      "description": "Deploy the application using Docker and Kubernetes for scalability and reliability.",
+      "status": "pending"
+    },
+    {
+      "id": 14,
+      "description": "Conduct performance testing to ensure the rule engine and API handle large OpenAPI files efficiently.",
+      "status": "pending"
+    },
+    {
+      "id": 15,
+      "description": "Document the API endpoints, frontend usage, and deployment process for end-users and developers.",
+      "status": "pending"
+    }
+  ]
+}
