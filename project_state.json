@@ -8,7 +8,7 @@
     {
       "id": 1,
       "description": "Set up the project repository with basic folder structures, initialize Git, and configure Docker for containerization.",
-      "status": "pending"
+      "status": "completed"
     },
     {
       "id": 2,
