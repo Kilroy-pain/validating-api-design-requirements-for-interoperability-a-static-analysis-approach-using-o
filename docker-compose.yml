@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=postgres
+      - DB_NAME=apidb
+      - DB_USER=apiuser
+      - DB_PASSWORD=apipassword
+    depends_on:
+      - postgres
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  postgres:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=apidb
+      - POSTGRES_USER=apiuser
+      - POSTGRES_PASSWORD=apipassword
+
+volumes:
+  postgres_data:
