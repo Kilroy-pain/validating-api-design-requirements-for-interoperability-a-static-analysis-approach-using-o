@@ -13,7 +13,7 @@
     {
       "id": 2,
       "description": "Implement a configurable rule engine in Python to validate OpenAPI specifications against predefined rules.",
-      "status": "pending"
+      "status": "completed"
     },
     {
       "id": 3,
