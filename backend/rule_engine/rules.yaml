@@ -1,0 +1,18 @@
+rules:
+  - id: INFO-001
+    description: API must have contact information
+    severity: error
+    json_path: '$.info.contact'
+  - id: PATH-001
+    description: All paths must have operation IDs
+    severity: warning
+    json_path: '$.paths.*.*.operationId'
+  - id: SCHEMA-001
+    description: Request bodies must have JSON schema
+    severity: error
+    schema:
+      type: object
+      required: [content]
+      properties:
+        content:
+          required: ["application/json"]
