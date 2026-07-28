@@ -12,3 +12,4 @@ The solution is a production-ready API quality validation platform that uses a c
 
 - **Completed Task:** Set up the project repository with basic folder structures, initialize Git, and configure Docker for containerization.
 - **Completed Task:** Implement a configurable rule engine in Python to validate OpenAPI specifications against predefined rules.
+- **Completed Task:** Design and implement a RESTful API using FastAPI to expose endpoints for uploading OpenAPI files, running validations, and retrieving reports.
