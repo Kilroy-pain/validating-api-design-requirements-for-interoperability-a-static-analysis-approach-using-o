@@ -1,6 +1,6 @@
 import yaml
 from jsonpath_ng import parse
-from jsonschema import validate
+from jsonschema import validate, ValidationError
 from typing import List, Dict, Any
 
 class RuleEngine:
@@ -11,23 +11,23 @@ class RuleEngine:
     def validate_spec(self, spec: Dict) -> List[Dict]:
         violations = []
         for rule in self.rules:
-            if 'json_path' in rule:
-                matches = [m.value for m in parse(rule['json_path']).find(spec)]
-                if not matches:
-                    violations.append({
-                        'rule_id': rule['id'],
-                        'description': rule['description'],
-                        'severity': rule['severity'],
-                        'path': rule['json_path']
-                    })
-            elif 'schema' in rule:
-                try:
+            try:
+                if 'json_path' in rule:
+                    matches = [m.value for m in parse(rule['json_path']).find(spec)]
+                    if not matches:
+                        violations.append({
+                            'rule_id': rule['id'],
+                            'message': rule['description'],
+                            'severity': rule['severity'],
+                            'path': rule['json_path']
+                        })
+                elif 'schema' in rule:
                     validate(instance=spec, schema=rule['schema'])
-                except Exception as e:
-                    violations.append({
-                        'rule_id': rule['id'],
-                        'description': f"Schema validation failed: {str(e)}",
-                        'severity': rule['severity'],
-                        'path': '/'
-                    })
+            except ValidationError as e:
+                violations.append({
+                    'rule_id': rule['id'],
+                    'message': f"Schema validation failed: {e.message}",
+                    'severity': rule['severity'],
+                    'path': e.json_path
+                })
         return violations
