@@ -18,7 +18,7 @@
     {
       "id": 3,
       "description": "Design and implement a RESTful API using FastAPI to expose endpoints for uploading OpenAPI files, running validations, and retrieving reports.",
-      "status": "pending"
+      "status": "completed"
     },
     {
       "id": 4,
