@@ -23,7 +23,7 @@
     {
       "id": 4,
       "description": "Develop a PostgreSQL database schema to store rule configurations, validation results, and user data.",
-      "status": "pending"
+      "status": "completed"
     },
     {
       "id": 5,
