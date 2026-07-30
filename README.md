@@ -14,3 +14,4 @@ The solution is a production-ready API quality validation platform that uses a c
 - **Completed Task:** Implement a configurable rule engine in Python to validate OpenAPI specifications against predefined rules.
 - **Completed Task:** Design and implement a RESTful API using FastAPI to expose endpoints for uploading OpenAPI files, running validations, and retrieving reports.
 - **Completed Task:** Develop a PostgreSQL database schema to store rule configurations, validation results, and user data.
+- **Completed Task:** Create a React.js frontend for managing API design rules, viewing validation reports, and configuring rule settings.
