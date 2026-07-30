@@ -1,23 +1,41 @@
 import React from 'react';
-import { Button, Container, Typography } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Box, AppBar, Toolbar, Button, Container, CssBaseline } from '@mui/material';
+import RulesManager from './components/RulesManager';
+import ReportsView from './components/ReportsView';
 
 function App() {
   return (
-    <Container maxWidth="md" sx={{ mt: 8, textAlign: 'center' }}>
-      <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 700, color: 'primary.main' }}>
-        API Quality Validator
-      </Typography>
-      <Typography variant="h5" sx={{ mb: 4, color: 'text.secondary' }}>
-        Automated API Design Compliance Platform
-      </Typography>
-      <Button 
-        variant="contained" 
-        size="large" 
-        sx={{ px: 6, py: 1.5, borderRadius: 2, textTransform: 'none' }}
-      >
-        Get Started
-      </Button>
-    </Container>
+    <Router>
+      <CssBaseline />
+      <AppBar position="static" sx={{ bgcolor: 'background.paper', color: 'text.primary' }}>
+        <Toolbar>
+          <Box sx={{ flexGrow: 1, display: 'flex', gap: 4 }}>
+            <Button
+              component={Link}
+              to="/"
+              sx={{ color: 'inherit', fontWeight: 600, textTransform: 'none' }}
+            >
+              Rules
+            </Button>
+            <Button
+              component={Link}
+              to="/reports"
+              sx={{ color: 'inherit', fontWeight: 600, textTransform: 'none' }}
+            >
+              Reports
+            </Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
+
+      <Container maxWidth="xl" sx={{ py: 6 }}>
+        <Routes>
+          <Route path="/" element={<RulesManager />} />
+          <Route path="/reports" element={<ReportsView />} />
+        </Routes>
+      </Container>
+    </Router>
   );
 }
 
